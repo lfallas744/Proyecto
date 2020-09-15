@@ -6,17 +6,19 @@ ProductoPerecedero::ProductoPerecedero(string nomPro, string cod, float prec, in
 }
 
 float ProductoPerecedero::getPrecio() {
-
-	return 0.0;
+	return this->precio - calcularDescuento();
 }
 
-string ProductoPerecedero::getFecha() {
-	return " ";
+Fecha ProductoPerecedero::getFecha() {
+	return this->fechaDeVencimiento;
 }
-void ProductoPerecedero::setFecha(string) {
-
+void ProductoPerecedero::setFecha(Fecha fech) {
+	this->fechaDeVencimiento = fech;
 }
 float ProductoPerecedero::calcularDescuento() {
+	if (fechActual->difDias(this->fechaDeVencimiento)<=7) {
+		return this->precio * (0.5);
+	}
 	return 0;
 }
 string ProductoPerecedero::toString() {
@@ -25,5 +27,6 @@ string ProductoPerecedero::toString() {
 	s << Producto::toString();
 	s << "Descuento por aplicar al producto: " << calcularDescuento() << endl;
 	s << "Precio total del Producto: " << this->getPrecio() << endl;
+	s << "Fecha de vencimiento del producto: " << this->fechaDeVencimiento.toString() << endl;
 	return s.str();
 }
