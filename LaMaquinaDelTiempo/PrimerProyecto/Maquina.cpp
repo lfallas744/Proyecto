@@ -27,6 +27,11 @@ void Maquina::setNombre(string n) {
 string Maquina::toString() {
 	stringstream s;
 	s << this->nombre << " numero de identificador: " << this->identificador << '\n';
+	Iterador* ite =  obtenerIterador();
+	while (ite->haySiguiente()) {
+		s << ite->obtenerProducto()->toString() << '\n';
+	}
+	delete ite;
 	return s.str();
 }
 void Maquina::insertar(Producto* produc) {

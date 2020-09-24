@@ -144,6 +144,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Maquina.cpp" />
     <ClCompile Include="MenuAdministrador.cpp" />
+    <ClCompile Include="MenuCobro.cpp" />
     <ClCompile Include="MenuPrincipal.cpp" />
     <ClCompile Include="MonderoElectronico.cpp" />
     <ClCompile Include="Producto.cpp" />
@@ -159,6 +160,7 @@
     <ClInclude Include="Iterador.h" />
     <ClInclude Include="Maquina.h" />
     <ClInclude Include="MenuAdministrador.h" />
+    <ClInclude Include="MenuCobro.h" />
     <ClInclude Include="MenuPrincipal.h" />
     <ClInclude Include="MonderoElectronico.h" />
     <ClInclude Include="Producto.h" />

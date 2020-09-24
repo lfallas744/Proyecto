@@ -2,13 +2,16 @@
 #include <iostream>
 #include "Vista.h"
 #include "MenuAdministrador.h"
+#include "MenuCobro.h"
 using namespace std;
 
-class MenuPrincipal
-{
+class MenuPrincipal{
+private:
 	MenuAdministrador* ptrMenuAdmi;
+	MenuCobro* ptrMenuCobro;
+
 public:
-	void menuPrincial(MenuAdministrador*);
+	MenuPrincipal(MenuAdministrador*, MenuCobro*);
 
 	void invocarMenu();
 

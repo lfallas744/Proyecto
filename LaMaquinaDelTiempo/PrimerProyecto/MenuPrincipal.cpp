@@ -1,8 +1,9 @@
 #include "MenuPrincipal.h"
 
-void MenuPrincipal::menuPrincial(MenuAdministrador* menuAdmi)
+MenuPrincipal::MenuPrincipal(MenuAdministrador* menuAdmi, MenuCobro* menuCobro)
 {
 	this->ptrMenuAdmi = menuAdmi;
+	this->ptrMenuCobro = menuCobro;
 }
 
 void MenuPrincipal::invocarMenu()
@@ -31,6 +32,7 @@ void MenuPrincipal::menuAdministrador()
 	ptrMenuAdmi->invocarMenu1();
 }
 
-void MenuPrincipal::menuCobro()
-{
+void MenuPrincipal::menuCobro(){
+
+	ptrMenuCobro->InvocarMenu();
 }
