@@ -47,7 +47,7 @@ string Producto::toString() {
 	s << "******** Informacion del producto ********" << endl;
 	s << "Nombre del Producto: " << this->nombre<<endl;
 	s << "Codigo del producto: " << this->codigo<<endl;
-	s << "Precio del producto: " << this->precio << endl;
+	s << "Precio del producto: " << this->getPrecio() << endl;
 	s << "Cantidad de productos en inventario: " << this->cantidad << endl;
 	return s.str();
 }

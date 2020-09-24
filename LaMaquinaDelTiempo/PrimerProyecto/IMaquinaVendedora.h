@@ -1,6 +1,7 @@
 #pragma once
 #include<iostream>
-#include "Producto.h"
+#include"ProductoNoPerecedero.h"
+#include"ProductoPerecedero.h"
 using namespace std;
 
 class IMaquinaVendedora {

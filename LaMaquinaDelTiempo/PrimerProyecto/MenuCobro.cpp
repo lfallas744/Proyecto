@@ -50,7 +50,6 @@ void MenuCobro::SeleccionarProducto() {
 
 	cout << "Ingrese el Id del producto a seleccionar" << endl;
 	cin >> idPro;
-	
 	if (this->maquina->consultar(idPro)!=nullptr) {
 		cout << "Desea comprar el producto" << endl;
 		cout << "1- Si "<< endl;

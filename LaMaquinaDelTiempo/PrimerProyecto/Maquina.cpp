@@ -27,7 +27,7 @@ void Maquina::setNombre(string n) {
 string Maquina::toString() {
 	stringstream s;
 	s << this->nombre << " numero de identificador: " << this->identificador << '\n';
-	Iterador* ite =  obtenerIterador();
+	Iterador* ite = new Iterador(coleccion, cantidad);
 	while (ite->haySiguiente()) {
 		s << ite->obtenerProducto()->toString() << '\n';
 	}
@@ -84,12 +84,6 @@ string Maquina::realizarCompra(string id, int cantidad, int montoPago) {
 	this->disminuirProvisiones(id, cantidad);
 	return monedero->desgloceVuelto(montoPago);
 }
-
-Iterador* Maquina::obtenerIterador()
-{
-	return new Iterador(this->coleccion,this->cantidad);
-}
-
 Maquina::~Maquina() {
 	delete[] this->coleccion;
 	delete monedero;

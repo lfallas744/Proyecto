@@ -29,7 +29,7 @@ void MenuPrincipal::invocarMenu()
 
 void MenuPrincipal::menuAdministrador()
 {
-	ptrMenuAdmi->invocarMenu1();
+	ptrMenuAdmi->invocarMenu();
 }
 
 void MenuPrincipal::menuCobro(){

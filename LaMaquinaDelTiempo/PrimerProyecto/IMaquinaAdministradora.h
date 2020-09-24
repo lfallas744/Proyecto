@@ -1,8 +1,7 @@
 #pragma once
 #include<iostream>
-#include"Producto.h"
-#include <sstream>
-
+#include"ProductoNoPerecedero.h"
+#include"ProductoPerecedero.h"
 using namespace std;
 
 class IMaquinaAdministradora {
@@ -18,4 +17,5 @@ public:
 	virtual Producto* consultar(string id) = 0;
 	virtual void ingresarDinero() = 0;
 	virtual void retirarDinero(int cantidad) = 0;
+	virtual ~IMaquinaAdministradora() = default;
 };

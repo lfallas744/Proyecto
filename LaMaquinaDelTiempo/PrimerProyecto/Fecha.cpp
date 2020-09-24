@@ -33,30 +33,30 @@ int Fecha::getAnnio() {
 	return this->annio;
 }
 
-int Fecha::difDias(Fecha b) {
+int Fecha::difDias(Fecha* b) {
 
 	int d, m, a, dif = 0;
 
 	//No se calcula si la fecha del producto es menor a la fecha actual
-	if (this->annio > b.annio) {
+	if (this->annio > b->annio) {
 		return -1;
 	}
 	else {
-		if (this-> annio == b.annio && this->mes > b.mes) {
+		if (this-> annio == b->annio && this->mes > b->mes) {
 			return -1;
 		}
 		else {
-			if (this->annio == b.annio && this->mes == b.mes && this->dia > b.dia) {
+			if (this->annio == b->annio && this->mes == b->mes && this->dia > b->dia) {
 				return -1;
 			}
 		}
 	}
 
 	//Mismo año
-    if (this->annio == b.annio) {
-        if (this->mes == b.mes) return b.dia - this->dia;
+    if (this->annio == b->annio) {
+        if (this->mes == b->mes) return b->dia - this->dia;
         // Dias por meses completos:   
-        for (a = this->mes + 1; a < b.mes; a++){
+        for (a = this->mes + 1; a < b->mes; a++){
             switch (a) {
             case 4: case 6: case 9: case 11:
                 dif += 30;
@@ -81,11 +81,11 @@ int Fecha::difDias(Fecha b) {
             dif += 31 - this->dia;
         }
         // Dias del mes de B:
-        dif += b.dia;
+        dif += b->dia;
 
         return dif;
 
-    } else dif = (b.annio - (this->annio + 1)) * 365;
+    } else dif = (b->annio - (this->annio + 1)) * 365;
 
     for (a = this->mes + 1; a <= 12; a++)
     {
@@ -102,7 +102,7 @@ int Fecha::difDias(Fecha b) {
     }
 
     // Y los meses desde ppio del año de B:   
-    for (a = 1; a < b.mes; a++)
+    for (a = 1; a < b->mes; a++)
     {
         switch (a) {
         case 4: case 6: case 9: case 11:
@@ -127,7 +127,7 @@ int Fecha::difDias(Fecha b) {
         dif += 31 - this->dia;
     }
     // Dias del mes de B:
-    dif += b.dia;
+    dif += b->dia;
 
     return dif;
 

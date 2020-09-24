@@ -1,17 +1,6 @@
-﻿  Fecha.cpp
-D:\anton\Escritorio\Proyecto Progra\Proyecto\LaMaquinaDelTiempo\PrimerProyecto\Fecha.cpp(38,9): warning C4101: 'm': variable local sin referencia
-D:\anton\Escritorio\Proyecto Progra\Proyecto\LaMaquinaDelTiempo\PrimerProyecto\Fecha.cpp(38,6): warning C4101: 'd': variable local sin referencia
-  Iterador.cpp
-  main.cpp
-  Maquina.cpp
-  MenuAdministrador.cpp
+﻿  Maquina.cpp
   MenuCobro.cpp
   MenuPrincipal.cpp
-  MonderoElectronico.cpp
-  Producto.cpp
-  ProductoNoPerecedero.cpp
-  ProductoPerecedero.cpp
-D:\anton\Escritorio\Proyecto Progra\Proyecto\LaMaquinaDelTiempo\PrimerProyecto\ProductoPerecedero.cpp(20,23): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
   Vista.cpp
-  Generando código...
-  PrimerProyecto.vcxproj -> D:\anton\Escritorio\Proyecto Progra\Proyecto\LaMaquinaDelTiempo\Debug\PrimerProyecto.exe
+  Generating Code...
+  PrimerProyecto.vcxproj -> C:\Users\Hola\Desktop\LaMaquinaDelTiempo\Debug\PrimerProyecto.exe
